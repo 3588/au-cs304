@@ -1,0 +1,7 @@
+,trace <function> ...
+ 
+  trace a function
+ 
+  [Synonyms: ,tr]
+ 
+

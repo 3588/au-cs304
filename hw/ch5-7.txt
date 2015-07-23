@@ -1,0 +1,44 @@
+#include <iostream>
+#include <ctime>
+using namespace std;
+void StaticArray() //statically
+{
+     static int x[1];
+	 for (int i=0; i<100000; i++)
+        x[i]= i;
+}
+void StackArray() //on the Stack
+{
+    // int *z[1];
+	 //for (int i=0; i<100000; i++)
+       // z[i] = i;
+}
+void HeapArray() //From the heap
+{
+     int *y;
+     y = new int[1];
+	 for (int i=0; i<100000; i++)
+        y[i]= i;
+}
+int main()  {
+
+	clock_t tStart0 = clock();
+    StaticArray();
+    double time0 = static_cast<double>(clock() - static_cast<double>(tStart0)/static_cast<double>(CLOCKS_PER_SEC));
+    cout << "Stack Time is" << time0; //output the time required on the stack
+
+
+   /* clock_t tStart1 = clock();
+    StackArray();
+    double time1 = static_cast<double>(clock() - static_cast<double>(tStart1)/static_cast<double>(CLOCKS_PER_SEC));
+    cout << "Stack Time is" << time1;
+	*/
+	
+	
+    clock_t tStart2 = clock();
+	HeapArray();
+    double time2 = static_cast<double>(clock() - static_cast<double>(tStart2)/static_cast<double>(CLOCKS_PER_SEC));
+	cout<< "Heap Time is"<< time2; //output the time required on the heap
+
+	return 0;
+}

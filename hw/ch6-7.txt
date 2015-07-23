@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+const unsigned int R_TEST=2
+const unsigned int C_TEST=3
+
+void ArrayTest1(int Test_Array[R_TEST][C_TEST]) // first part
+{
+
+   int i, j;
+
+   for ( i=0; i < R_TEST; i++)    
+   {
+      for ( j=0; j< C_TEST; j++) 
+      {
+	 Test_Array[i][j] = 0;    
+      }
+   }  
+
+}
+void ArrayTest2() // second part
+{
+}
+int main()
+{
+   int Test_Int[R_SIZE][C_SIZE];
+   ArrayTest1(Test_Int);
+   
+   return 0;
+
+}
