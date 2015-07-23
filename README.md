@@ -1,4 +1,4 @@
-# au-cs304
+# au-cs304 2012 Fall ashland university
 rogramming Languages
 The course deals with issues involved in the design and implementation of programming
 languages. Topics include syntax and semantics, type models, control models and structures,
